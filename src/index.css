@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+:root {
+  --White: #f0f3f6;
+  --Light: #dfe7f1;
+  --Gray: #999999;
+  --Black: #1e1e1e;
+  --Blue: #0f4392;
+  --Purple: #7b68ee;
+  --Green: #48d198;
+  --Yellow: #efc863;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+input {
+  outline: none;
+}
+
+.background-effect {
+  position: relative;
+  z-index: 1;
+  color: var(--White);
+  transition: all 100ms ease-in-out;
+  padding: 5px;
+  margin: 5px 0px;
+}
+
+.background-effect::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  transform: scaleY(0);
+  transform-origin: 50%;
+  background-color: var(--White);
+  z-index: -1;
+  transition: all 300ms ease-in-out;
+  border-radius: 4px;
+}
+
+.background-effect:hover {
+  color: var(--Black);
+}
+
+.background-effect:hover::before {
+  transform: scaleY(1);
+}
+
+.hero-heading {
+  background-image: linear-gradient(
+    108deg,
+    var(--Blue) 2%,
+    var(--Green) 40%,
+    var(--Black) 77%,
+    var(--Yellow) 91%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+img {
+  object-fit: fill;
+}
+
+.validation-error-msg {
+  font-size: 1rem;
+  font-weight: 400;
+  color: red;
+}
+
+.validation-error-input {
+  border: 2px solid red;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--Purple); /* Changes the color when checked */
+}
+
+.slider .thumb {
+  background-color: var(--White);
+  border: 2px solid var(--Purple);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: -9px;
+  cursor: grab;
+  outline: var(--Purple);
+}
+
+.track {
+  top: 0;
+  bottom: 0;
+  background: var(--Light);
+  border-radius: 999px;
+}
+
+.track-1 {
+  background: var(--Purple);
+}
+
+.css-13cymwt-control {
+  border: 2px solid;
+  color: var(--Black);
+  background-color: var(--Gray);
+}
+
+.fullscreen-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(153, 153, 153, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  border: 5px solid var(--Gray);
+  border-top: 5px solid var(--Purple);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Safer Side Color Classes*/
+.white {
+  background-color: #f0f3f6;
+}
+
+.black {
+  background-color: #1e1e1e;
+}
+
+.navy {
+  background-color: #000080;
+}
+
+.skyBlue {
+  background-color: #87ceeb;
+}
+
+.green {
+  background-color: #55eca8;
+}
+
+.red {
+  background-color: #800020;
+}
+
+.mustard {
+  background-color: #ffdb58;
+}
+
+.coral {
+  background-color: #ff7f50;
+}
+
+.lavender {
+  background-color: #e6e6fa;
+}
+
+.teal {
+  background-color: #008080;
+}
+
+.olive {
+  background-color: #808000;
+}
+
+.charcoal {
+  background-color: #36454f;
+}
+
+/* Gucci Jacket G-98 is a green shade rare gucci jacket which is very famous for it's cool looks and this can be paired with any shirt or t-shirt. */
+/* Black nike hoodie with great comfort and looks. */
+/* The OP-7 means One Piece 7 is the best t-shirt with for fans of one piece and specially for luffy fans. */
